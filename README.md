@@ -15,6 +15,7 @@
 [Objectives](#-project-objectives) •
 [Dataset](#-dataset) •
 [Workflow](#-technical-workflow) •
+[Visualizations](#-data-visualizations) •
 [Technologies](#-technologies-used) •
 [Installation](#-installation--usage) •
 [Learning Outcomes](#-learning-outcomes) •
@@ -40,7 +41,7 @@ The main goal is to develop practical skills in data cleaning, exploratory data 
 - Identify and handle duplicate records.
 - Check for missing values and investigate data quality.
 - Calculate descriptive statistics for numerical columns.
-- Explore how vehicle age and kilometers driven relate to selling price.
+- Explore how manufacturing year and kilometers driven relate to selling price.
 - Compare selling prices across fuel types, seller types, transmission types, and ownership categories.
 - Create visualizations to communicate useful findings.
 - Practice writing clear, reproducible data analysis code.
@@ -72,7 +73,7 @@ The dataset is included in this repository so the analysis can be reproduced loc
 
 ## 🏗️ Technical Workflow
 
-The project follows a structured data analysis workflow:
+The project follows a structured data analysis workflow.
 
 ### 1. Data Loading and Inspection
 
@@ -90,30 +91,78 @@ The project follows a structured data analysis workflow:
 
 ### 3. Exploratory Data Analysis (EDA)
 
-- Calculate mean, median, minimum, maximum, and other descriptive statistics.
+- Calculate descriptive statistics.
 - Examine the distribution of selling prices.
 - Investigate the relationship between kilometers driven and selling price.
 - Compare prices across manufacturing years.
-- Analyze categorical features such as fuel type, seller type, and transmission.
+- Analyze categorical features such as fuel type and transmission.
 
 ### 4. Data Visualization
 
-Use Matplotlib and Seaborn to create charts that help reveal patterns and differences in the dataset.
+Use Matplotlib and Seaborn to create charts that reveal patterns and differences in the dataset.
 
-Planned visualizations include:
-
-- Selling price distribution.
-- Selling price versus kilometers driven.
-- Manufacturing year versus selling price.
-- Selling price comparisons across fuel and transmission types.
-- Comparisons of prices across ownership categories.
+The visualizations created so far are displayed in the section below.
 
 ### 5. Interpretation and Findings
 
 - Interpret the patterns observed in the charts.
-- Distinguish correlations and associations from causal relationships.
+- Distinguish associations from causal relationships.
 - Consider dataset limitations, including small groups and possible outliers.
-- Summarize the findings in clear, understandable language.
+- Summarize findings in clear, understandable language.
+
+---
+
+## 📈 Data Visualizations
+
+The following charts were generated using Python, Pandas, Matplotlib, and Seaborn. Each chart is stored in the repository's `images/` folder.
+
+### 1. Selling Price Distribution
+
+Shows the distribution of selling prices across the cars in the dataset.
+
+![Selling Price Distribution](images/selling_price_distribution.png)
+
+[View image](images/selling_price_distribution.png)
+
+### 2. Kilometers Driven vs. Selling Price
+
+Explores the relationship between the distance driven and a car's selling price.
+
+![Kilometers Driven vs Selling Price](images/price_vs_kilometers_driven.png)
+
+[View image](images/price_vs_kilometers_driven.png)
+
+### 3. Median Selling Price by Manufacturing Year
+
+Compares the median selling price of cars across manufacturing years.
+
+![Median Price by Manufacturing Year](images/median_price_by_year.png)
+
+[View image](images/median_price_by_year.png)
+
+### 4. Number of Cars by Manufacturing Year
+
+Shows how many cars are represented for each manufacturing year in the cleaned dataset.
+
+![Number of Cars by Manufacturing Year](images/car_count_by_year.png)
+
+[View image](images/car_count_by_year.png)
+
+### 5. Median Selling Price by Fuel Type
+
+Compares median selling prices across fuel categories.
+
+![Median Price by Fuel Type](images/median_price_by_fuel.png)
+
+[View image](images/median_price_by_fuel.png)
+
+### 6. Median Selling Price by Transmission Type
+
+Compares median selling prices for different transmission types.
+
+![Median Price by Transmission Type](images/median_price_by_transmission.png)
+
+[View image](images/median_price_by_transmission.png)
 
 ---
 
@@ -194,7 +243,12 @@ used_car_price_analysis_project_py/
 │   └── car_data.csv
 │
 ├── images/
-│   └── (visualizations, when added)
+│   ├── car_count_by_year.png
+│   ├── median_price_by_fuel.png
+│   ├── median_price_by_transmission.png
+│   ├── median_price_by_year.png
+│   ├── price_vs_kilometers_driven.png
+│   └── selling_price_distribution.png
 │
 ├── used_car_price_analysis.ipynb
 ├── requirements.txt
